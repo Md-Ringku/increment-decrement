@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 300px;
+            margin: 100px auto;
+            background: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0px 0px 8px #000000c7;
+        }
+        
+        body {
+            background: #ddd;
+            margin: 0;
+            padding: 0;
+        }
+        
+        button.increment {
+            background: orange;
+            color: #fff;
+            border: none;
+            padding: 10px 10px;
+            margin-right: 10px;
+            text-transform: uppercase;
+            font-weight: 900;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button.decrement {
+            background: black;
+            color: #fff;
+            border: none;
+            padding: 10px 10px;
+            margin-right: 10px;
+            text-transform: uppercase;
+            font-weight: 900;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        h2.value {
+            font-size: 44px;
+            color: #0066ff;
+            margin: 0 0 33px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2 class="value">0</h2>
+        <button class="increment">increment</button>
+        <button class="decrement">decrement</button>
+    </div>
+    <div id="demo"></div>
+    <script>
+        var count = 0;
+        document.querySelector(".increment").addEventListener("click", function() {
+            count++;
+            document.querySelector(".value").innerHTML = count;
+        });
+        document.querySelector(".decrement").addEventListener("click", function() {
+            count--;
+            document.querySelector(".value").innerHTML = count;
+        });
+    </script>
+</body>
+
+</html>
